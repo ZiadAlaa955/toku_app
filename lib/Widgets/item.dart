@@ -3,8 +3,8 @@ import 'package:toku_app/Models/item_model.dart';
 import 'package:toku_app/constants.dart';
 
 class Item extends StatelessWidget {
-  const Item({super.key, required this.itemModel});
-  final ItemModel itemModel;
+  const Item({super.key, required this.items});
+  final ItemModel items;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +14,7 @@ class Item extends StatelessWidget {
           Container(
             color: const Color(0xffFDF2DA),
             child: Image.asset(
-              itemModel.image,
+              items.image,
               height: 100,
             ),
           ),
@@ -23,14 +23,14 @@ class Item extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  itemModel.jpText,
+                  items.jpText,
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                   ),
                 ),
                 Text(
-                  itemModel.enText,
+                  items.enText,
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,

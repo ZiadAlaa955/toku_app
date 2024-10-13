@@ -3,7 +3,7 @@ class ItemModel {
   final String jpText;
   final String enText;
 
-  ItemModel({
+  const ItemModel({
     required this.image,
     required this.jpText,
     required this.enText,
