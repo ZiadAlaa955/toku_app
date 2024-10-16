@@ -46,7 +46,7 @@ class Item extends StatelessWidget {
             child: IconButton(
               onPressed: () {
                 final player = AudioPlayer();
-                player.play(AssetSource('sounds/numbers/number_one_sound.mp3'));
+                player.play(AssetSource(items.sound));
               },
               icon: const Icon(
                 Icons.play_arrow,
