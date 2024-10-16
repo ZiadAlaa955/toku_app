@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toku_app/Views/colors_view.dart';
 import 'package:toku_app/Views/family_members_view.dart';
 import 'package:toku_app/Views/numbers_view.dart';
 import 'package:toku_app/Widgets/category.dart';
@@ -39,7 +40,9 @@ class HomeView extends StatelessWidget {
             color: kFamilyViewColor,
           ),
           Category(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, ColorsView.id);
+            },
             title: 'Colors',
             color: kColorsViewColor,
           ),
