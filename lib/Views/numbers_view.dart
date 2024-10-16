@@ -9,62 +9,62 @@ class NumbersView extends StatelessWidget {
   final List<ItemModel> itemsList = const [
     ItemModel(
       image: 'assets/images/numbers/number_one.png',
-      jpText: 'Ichi',
-      enText: 'One',
+      jpname: 'Ichi',
+      enName: 'One',
       sound: 'sounds/numbers/number_one_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_two.png',
-      jpText: 'Ni',
-      enText: 'Two',
+      jpname: 'Ni',
+      enName: 'Two',
       sound: 'sounds/numbers/number_two_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_three.png',
-      jpText: 'San',
-      enText: 'Three',
+      jpname: 'San',
+      enName: 'Three',
       sound: 'sounds/numbers/number_three_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_four.png',
-      jpText: 'Shi',
-      enText: 'Four',
+      jpname: 'Shi',
+      enName: 'Four',
       sound: 'sounds/numbers/number_four_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_five.png',
-      jpText: 'Go',
-      enText: 'Five',
+      jpname: 'Go',
+      enName: 'Five',
       sound: 'sounds/numbers/number_five_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_six.png',
-      jpText: 'Roku',
-      enText: 'Six',
+      jpname: 'Roku',
+      enName: 'Six',
       sound: 'sounds/numbers/number_six_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_seven.png',
-      jpText: 'Sebun',
-      enText: 'Seven',
+      jpname: 'Sebun',
+      enName: 'Seven',
       sound: 'sounds/numbers/number_seven_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_eight.png',
-      jpText: 'Hachi',
-      enText: 'Eight',
+      jpname: 'Hachi',
+      enName: 'Eight',
       sound: 'sounds/numbers/number_eight_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_nine.png',
-      jpText: 'Ku',
-      enText: 'Nine',
+      jpname: 'Ku',
+      enName: 'Nine',
       sound: 'sounds/numbers/number_nine_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_ten.png',
-      jpText: 'Ju',
-      enText: 'Ten',
+      jpname: 'Ju',
+      enName: 'Ten',
       sound: 'sounds/numbers/number_ten_sound.mp3',
     ),
   ];
@@ -86,7 +86,10 @@ class NumbersView extends StatelessWidget {
       body: ListView.builder(
         itemCount: itemsList.length,
         itemBuilder: (context, index) {
-          return Item(items: itemsList[index]);
+          return Item(
+            items: itemsList[index],
+            color: kNumbersViewColor,
+          );
         },
       ),
     );

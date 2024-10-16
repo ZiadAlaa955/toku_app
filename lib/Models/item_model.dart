@@ -1,13 +1,15 @@
+import 'dart:ui';
+
 class ItemModel {
   final String image;
-  final String jpText;
-  final String enText;
+  final String jpname;
+  final String enName;
   final String sound;
 
   const ItemModel({
     required this.image,
-    required this.jpText,
-    required this.enText,
+    required this.jpname,
+    required this.enName,
     required this.sound,
   });
 }

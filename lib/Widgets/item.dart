@@ -4,12 +4,13 @@ import 'package:toku_app/Models/item_model.dart';
 import 'package:toku_app/constants.dart';
 
 class Item extends StatelessWidget {
-  const Item({super.key, required this.items});
+  const Item({super.key, required this.items, required this.color});
   final ItemModel items;
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: kNumbersViewColor,
+      color: color,
       child: Row(
         children: [
           Container(
@@ -24,14 +25,14 @@ class Item extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  items.jpText,
+                  items.jpname,
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                   ),
                 ),
                 Text(
-                  items.enText,
+                  items.enName,
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
