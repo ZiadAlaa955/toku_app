@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/Models/item_model.dart';
-import 'package:toku_app/Widgets/item.dart';
+import 'package:toku_app/Widgets/item_info.dart';
 import 'package:toku_app/constants.dart';
 
 class PhrasesView extends StatelessWidget {
