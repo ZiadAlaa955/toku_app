@@ -16,48 +16,72 @@ class Item extends StatelessWidget {
           Container(
             color: const Color(0xffFDF2DA),
             child: Image.asset(
-              items.image,
-              height: 100,
+              items.image!,
+              height: 105,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  items.jpname,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
-                ),
-                Text(
-                  items.enName,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(right: 5),
-            child: IconButton(
-              onPressed: () {
-                final player = AudioPlayer();
-                player.play(AssetSource(items.sound));
-              },
-              icon: const Icon(
-                Icons.play_arrow,
-                size: 30,
-                color: Colors.white,
-              ),
-            ),
+          ItemInfo(
+            items: items,
+            color: color,
           ),
         ],
+      ),
+    );
+  }
+}
+
+class ItemInfo extends StatelessWidget {
+  const ItemInfo({super.key, required this.items, required this.color});
+  final ItemModel items;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        height: 104,
+        color: color,
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 10, top: 25),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    items.jpname,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                    ),
+                  ),
+                  Text(
+                    items.enName,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Spacer(),
+            Padding(
+              padding: const EdgeInsets.only(right: 5),
+              child: IconButton(
+                onPressed: () {
+                  final player = AudioPlayer();
+                  player.play(AssetSource(items.sound));
+                },
+                icon: const Icon(
+                  Icons.play_arrow,
+                  size: 30,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
